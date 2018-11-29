@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Skip local Dropbox directory and directly upload to Dropbox - Python and Machine Learning blog</title>	
+	<meta name="author" content="Andrej Lukic">
+	
+
+	<meta name="description" content="To directly upload files to your Dropbox account without copying them to the local Dropbox folder use symbolic links (steps 1-7). This is an alternative to using the Dropbox web interface, which can be impractical in case you have to upload many files. Step by step Connect an external drive …">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+	      <nav class="pages">
+	      </nav>
+		<a href="" class="title">Python and Machine Learning blog</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>Skip local Dropbox directory and directly upload to Dropbox</h1>
+		
+<div class="metadata">
+  <time datetime="2018-08-04T00:00:00+02:00" pubdate>Sa 04 August 2018</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/andrej-lukic.html">Andrej Lukic</a>
+    </address>
+  in <a href="/category/dropbox.html">dropbox</a>
+</div>		
+		<p><br />
+To directly upload files to your Dropbox account without copying them to the local Dropbox folder use symbolic links (<a href="#ss">steps 1-7</a>). This is an alternative to using the Dropbox web interface, which can be impractical in case you have to upload many files.</p>
+<p><a name="ss">Step by step</a></p>
+<ol>
+<li>
+<p>Connect an external drive with the files you want to upload directly. An external drive is handy, because you can physically remove it in step 5</p>
+</li>
+<li>
+<p>Open Windows command prompt (cmd.exe) under administrator priviliges and change to your local Dropbox directory (<a href="static/2018-dbgf/001.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+<li>
+<p>Create a symbolic link connecting files on the external drive E:\newfiles to somewhere inside your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) <img src="static/2018-dbgf/002.gif" alt="drawing" style="margin-top:20px; width:600px;"/></p>
+</li>
+<li>
+<p>Wait until Dropbox finishes indexing and uploading all the files to cloud</p>
+</li>
+<li>
+<p>Physically disconnect your external drive containing files from your computer to prevent Dropbox deleting them in the next step (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+<li>
+<p>Use selective sync option in the Dropbox settings to prevent downloading the new files back to your local Dropbox direcory (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) - remember to first disconnect the external drive</p>
+</li>
+<li>
+<p>Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+</ol>
+<p>That's all!</p>
+<p>~                                                        </p>	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Categories</h2>
+	          <ul>
+	              <li class="active"><a href="/category/dropbox.html">dropbox</a></li>
+	          </ul>
+	        </nav>
+
+	          <aside>
+	          <h2>Social</h2>
+			    <ul class="social">
+				  <li><a href="https://www.linkedin.com/in/andrej-lukic/">LinkedIn</a><i></i></li>
+			    </ul>
+			  </aside>
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Andrej Lukic - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+	  <script>
+		var _gaq=[['_setAccount','UA-130113606-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	  </script>
+
+</body>
+</html>
